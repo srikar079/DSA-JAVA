@@ -1,0 +1,30 @@
+Q link:
+https://leetcode.com/problems/length-of-last-word/description/?envType=daily-question&envId=2024-04-01
+
+Solution -1:
+class Solution {
+    public int lengthOfLastWord(String s) {
+        String[] arr = s.split(" ");
+           return arr[arr.length - 1].length();
+    }
+}
+
+
+Solution -2:
+
+class Solution {
+    public int lengthOfLastWord(String s) {
+      int count=0;
+      for(int x=s.length()-1;x>=0;x--){
+        if(s.charAt(x)==' '){
+          if(count>0){
+          return count;
+         }
+      }
+      else 
+       count++;
+   }
+ return count;
+
+    }
+} 
